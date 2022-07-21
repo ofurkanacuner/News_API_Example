@@ -1,0 +1,42 @@
+﻿@using NewsApi.Models;
+@model NewsResponseModel;
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Text input fields</h2>
+
+    <form>
+        @foreach (Article item in Model.Articles)
+        {
+            <label>Author : </label>
+            <br>
+            <label>@item.Author</label>
+            <hr />
+
+            <label>Title : </label>
+            <br>
+            <label>@item.Title</label>
+            <hr />
+
+            <label>Url : </label>
+            <br>
+            <label>@item.Url</label>
+            <hr />
+
+            <label>Source : </label>
+            <br>
+            <label>@item.Source.Name</label>
+            <hr>
+
+            <br />
+            <label>*****************************************************************************************</label>
+            <br />
+        }
+    </form>
+
+</body>
+</html>
+
+
